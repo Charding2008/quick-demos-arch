@@ -14,7 +14,7 @@
 # Finally, do not use spaces or unusual characters in the variable values!
 #
 
-    uk_se_name: arch
+    uk_se_name: charles
     stack_name: ansible-f5-auto-ws
 
     aws_region: eu-west-2
@@ -25,13 +25,16 @@
     cft_stack_name_list:
       - autows-cft-stack-1
       - autows-cft-stack-2
+      - autows-cft-stack-3
+      - autows-cft-stack-4
+      - autows-cft-stack-5
 #    
 #------------------------------------------------------------------------------
 #
     automation_tool: "ansible"
 
-    sshKey: "arch_id_rsa"
-    ssh_key_file_path: "~/.ssh/id_rsa"
+    sshKey: "charles_id_rsa"
+    ssh_key_file_path: "~/.ssh/id_rsa.pem"
     
     #vpc_name: "{{ uk_se_name }}-{{ stack_name }}"
     vpc_name: "{{ uk_se_name }}-autows-bigips"

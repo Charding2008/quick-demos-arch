@@ -27,7 +27,7 @@
   #
   vars_files:
     - ../../../creds/aws_creds.yaml
-    - ../../../creds/big_creds.yaml
+    - ../../../creds/aws_big_creds.yaml
     - ./vars.yaml
 
 #------------------------------------------------------------------------------
