@@ -13,17 +13,17 @@
 # don't update them, I'll be usung the same tags and might delete your deployment.
 # Finally, do not use spaces or unusual characters in the variable values!
 #
-    uk_se_name: arch
+    uk_se_name: charles
     stack_name: vdi-desktops-autows
     
-    aws_region: eu-west-1
+    aws_region: eu-west-2
     subnet_start: "10.1"
 #    
 #------------------------------------------------------------------------------
 #
     automation_tool: "ansible"
 
-    sshKey: "arch_id_rsa"
+    sshKey: "charles_id_rsa"
     ssh_key_file_path: "~/.ssh/id_rsa"
     
     vpc_name: "{{ uk_se_name }}-{{ stack_name }}"

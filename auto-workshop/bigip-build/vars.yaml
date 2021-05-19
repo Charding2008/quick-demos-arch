@@ -24,17 +24,16 @@
 
     cft_stack_name_list:
       - autows-cft-stack-1
-      - autows-cft-stack-2
-      - autows-cft-stack-3
-      - autows-cft-stack-4
-      - autows-cft-stack-5
+#     - autows-cft-stack-2
+#      - autows-cft-stack-3
 #    
 #------------------------------------------------------------------------------
 #
     automation_tool: "ansible"
 
+    # sshKey: "charles_id_rsa"
     sshKey: "charles_id_rsa"
-    ssh_key_file_path: "~/.ssh/id_rsa.pem"
+    ssh_key_file_path: "/Users/charding/.ssh/id_rsa"
     
     #vpc_name: "{{ uk_se_name }}-{{ stack_name }}"
     vpc_name: "{{ uk_se_name }}-autows-bigips"

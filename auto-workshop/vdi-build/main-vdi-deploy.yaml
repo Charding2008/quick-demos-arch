@@ -9,8 +9,9 @@
   gather_facts: no
 
   environment:
-    AWS_ACCESS_KEY_ID: "{{ ec2_access_key }}"
-    AWS_SECRET_ACCESS_KEY: "{{ ec2_secret_key }}"
+    AWS_ACCESS_KEY_ID: "{{ aws_access_key_id }}"
+    AWS_SECRET_ACCESS_KEY: "{{ aws_secret_access_key }}"
+    AWS_SESSION_TOKEN: "{{ aws_session_token }}"
     AWS_REGION: "{{ aws_region }}"
 
     
@@ -27,7 +28,7 @@
   #
   vars_files:
     - ../../../creds/aws_creds.yaml
-    - ../../../creds/big_creds.yaml
+    - ../../../creds/aws_big_creds.yaml
     - ./vars.yaml
 
 #------------------------------------------------------------------------------
@@ -144,11 +145,12 @@
 
 
   - name: GET AMI FACTS
-    ec2_ami_facts:
-      image_ids: ami-03581e6142a3e1a81
+    ec2_ami_info:
+      image_ids: ami-0d8d7288aca78ee6f
       #filters:
         #name: "xworkspace*"
     register: ami_facts
+
 
 
   - name: "AMI FACTS"
@@ -160,7 +162,7 @@
     ec2:
       key_name: "{{ sshKey }}"
       instance_type: t2.medium
-      image: ami-03581e6142a3e1a81
+      image: ami-0d8d7288aca78ee6f
       wait: yes
       group: "{{ sg_name }}"
       count: 3
